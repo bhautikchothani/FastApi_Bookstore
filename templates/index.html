@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="../static/js/index.js"></script>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1>Book Store</h1>
+  </div>
+<div class="login-container">
+ <h2> Welcome To Book store Login </h2>
+ <form action="/signin" method="post">
+  <div class="form-group">
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username"><br><br>
+  </div>
+  <div class="form-group">
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password"><br><br>
+  </div>
+  <div class="form-group">
+    <select id="role" name="role" required>
+      <option value="admin">Admin</option>
+      <option value="student">Student</option>
+    </select><br><br>
+  </div>
+  <button type="submit" class="btn-login">Login</button>
+</form><br>
+<form action="/signup" method="get">
+  <button type="submit" class="btn-login">Signup</button>
+</form>
+</div>
+<footer>Copyright &copy; 2021 BookStore</footer>
+</body>
+</html>
+
+<!-- 
+<div id="header">
+  <h1>Book Store</h1>
+</div>
+<div class="login-container">
+  <h2>Welcome To Book Store Login</h2>
+  <form action="/signin" method="post">
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <div class="form-group">
+      <label for="role">Role (student/Admin):</label>
+      <input type="text" id="role" name="role">
+    </div>
+    <button type="submit" class="btn-login">Login</button>
+  </form>
+</div>
+
+</body>
+</html> -->
+
+

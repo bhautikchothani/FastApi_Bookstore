@@ -1,0 +1,227 @@
+body {
+    margin: 0;
+}
+
+#header {
+    font-size: 3vh; /* Adjusted font size for smaller screens */
+    height: 60px;
+    background-color: rgb(64, 70, 71);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar {
+    width: 200px;
+    height: 230vh;
+    background-color: rgb(87, 73, 73);
+    float: left;
+    padding-top: 60px;
+}
+
+.sidebar-button {
+    display: block;
+    width: calc(100% - 10px); /* Adjusted width to accommodate the gap */
+    padding: 20px 0; /* Adjusted padding to center vertically */
+    margin: 5px; /* Added margin for the gap */
+    text-align: center;
+    background-color: rgb(92, 92, 146);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar-button:hover {
+    background-color: #6057db;
+}
+
+.sidebar-button span {
+    color: #fff;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    #header {
+        font-size: 4vh; /* Adjusted font size for medium screens */
+    }
+
+    #sidebar {
+        width: 100%;
+        height: auto; /* Allow sidebar to expand vertically */
+        padding-top: 0;
+        float: none; /* Remove float for center alignment */
+    }
+
+    .sidebar-button {
+        padding: 15px 0; /* Adjusted padding for smaller screens */
+    }
+}
+
+.user-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.edit-button,
+.delete-button {
+    margin-left: 10px;
+}
+
+#main-content {
+    margin-left: 200px; /* Adjusted to match sidebar width */
+}
+
+/* table  styles */
+
+#user-list {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #user-list th, #user-list td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #user-list tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #user-list th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  #user-list a {
+    color: #000;
+    text-decoration: none;
+    padding: 5px;
+  }
+  
+  #user-list a:hover {
+    background-color: #ddd;
+  }
+
+  /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  #header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-login {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-login:hover {
+    background-color: #0056b3;
+  }
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}

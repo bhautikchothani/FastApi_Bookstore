@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <script src="../static/js/index.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <div id="header">
+        Book Store
+    </div>
+    <div id="sidebar">
+        <!-- <button class="sidebar-button" onclick="redirectToDashboard()"><span>Dashboard</span></button> -->
+        <!-- <button class="sidebar-button" onclick="redirectToAdmin()"><span>Admin</span></button> -->
+        <button class="sidebar-button" onclick="redirectToStudent()"><span>Student</span></button>
+    </div>
+    <div id="main-content">
+        <table id="user-list">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>author</th>
+              <th>price</th>
+              <th>year_published</th>
+              <th>department</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for user in books %}
+              <tr>  
+                <td>{{ user.id }}</td>
+                <td>{{ user.title }}</td>
+                <td>{{ user.author }}</td>
+                <td>{{ user.price }}</td>
+                <td>{{ user.year_published }}</td>
+                <td>{{ user.department }}</td>
+                <!-- <td>
+                  <a href="/edit_book/{book_id}">Edit</a>
+                  <a href="/delete_book">Delete</a>
+                </td> -->
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    
+</body>
+</html>

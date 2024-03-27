@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <script src="../static/js/index.js"></script>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+  <div id="header">
+    <h1>Book Store</h1>
+  </div>
+  <div id="sidebar">
+    <button class="sidebar-button" onclick="redirectToAdmin()"><span>User Data</span></button>
+  </div>
+
+  <div id="main-content">
+    <h2><u>User Data</u></h2>
+    <table id="user-list">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>Role</th>
+          <th>Department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in users %}
+          <tr>
+            <td>{{ user.id }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.department }}</td>
+            <td>
+              <a href="/edit/{{ user.id }}">Edit</a>
+                <form action="/user_delete/{{ user.id }}" method="post" id="deleteForm">
+                  <input type="hidden" name="action" value="delete">
+                  <button type="submit">Delete</button>
+                </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+<!-- Books Data -->
+
+<div id="main-content">
+  <h2><u>Book Data</u></h2>
+    <table id="user-list">
+      <thead>
+        <tr>
+          <th>title</th>
+          <th>author</th>
+          <th>price</th>
+          <th>year_published</th>
+          <th>department</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for user in books %}
+          <tr>
+            <td>{{ user.title }}</td>
+            <td>{{ user.author }}</td>
+            <td>{{ user.price }}</td>
+            <td>{{ user.year_published }}</td>
+            <td>{{ user.department }}</td>
+            <td>
+              <a href="/edit_book/{{book_id}}">Edit</a>
+              <a href="/delete_book/{{book_id}}">Delete</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

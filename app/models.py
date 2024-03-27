@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String,Enum,ARRAY
 from app.database import SessionLocal, engine, Base
 from app.database import DATABASE_URL
 
@@ -12,6 +12,7 @@ class Book(Base):
     author = Column(String)
     price = Column(Integer)
     year_published = Column(Integer)
+    department = Column(String)
 
 books=Book
 
@@ -20,4 +21,7 @@ class User(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
-    password = Column(String)
+    password = Column(String(length=255))
+    role = Column(String(length=50))
+    department=Column(String(length=255))
+    
